@@ -71,10 +71,7 @@
 
     <!-- Add any scripts or additional content here -->
     <script>
-        // Global array to store the submissions
-        var submissions = [];
-
-        /**
+         /**
          * Submission constructor function.
          * @constructor
          * @param {string} name - The name of the submitter.
@@ -82,7 +79,7 @@
          * @param {string} feedback - The feedback provided by the submitter.
          * @param {string} satisfaction - The satisfaction level chosen by the submitter.
          */
-        function Submission(name, email, feedback, satisfaction) {
+         function Submission(name, email, feedback, satisfaction) {
             this.name = name;
             this.email = email;
             this.feedback = feedback;
@@ -92,31 +89,31 @@
             this.date = sDate;
         }
 
+        // Global array to store the submissions
+        var submissions = [];
+
         /**
          * Function to handle submission.
          */
         function makeSubmission() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
+            var feedback = document.getElementById("feedback").value;
 
-           // This gets the data from the buttons and stores it in a variable
+            // Get the selected satisfaction level
             var satLevelElements = document.querySelectorAll('input[type="radio"]:checked');
+            var satLevels = Array.from(satLevelElements).map(function(radio) {
+                return radio.value;
+            });
 
-            //Essentially Makes the NodeList from Radio Button Elements to an Array
-            var satLevels = Array.from(satLevelElements)
-                //Map over each radio button element in the array
-                .map(function(radio) {
-                    //Return the Selected Value
-                    return radio.value;
-                });
-
-            var submission = {
-                "name": name,
-                "email": email,
-                "satisfaction": satLevels
-            };
+            // Create Submission Object
+            var submission = new Submission(name, email, feedback, satLevels);
             
+            // Log the submission object
             console.log("Submission: ", submission); 
+
+            // Store the submission in the global submissions array
+            submissions.push(submission);
         }
     </script>
 </body>
