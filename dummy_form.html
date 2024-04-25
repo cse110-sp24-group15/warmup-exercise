@@ -21,7 +21,7 @@
                     <legend>Submissions:</legend>
                     <label for ="name">Name:</label>
                     <input type="text" id="name">
-                    <!-- BR is Creating a Space-->
+                    <!-- BR is Creating a Space -->
                     <br> 
 
                     <label for ="email">Email:</label>
@@ -51,7 +51,7 @@
                     <!-- BR is Creating a Space-->
                     <br>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" onclick="makeSubmission()">Submit</button>
 
 
                 </fieldset>
@@ -65,5 +65,31 @@
     </footer>
 
     <!-- Add any scripts or additional content here -->
+    <script>
+        //This congrates the Data Makes the Json File
+        function makeSubmission() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+           // This gets the data from the buttons and stores it in a variable
+            var satLevelElements = document.querySelectorAll('input[type="radio"]:checked');
+
+            //Essentially Makes the NodeList from Radio Button Elements to an Array
+            var satLevels = Array.from(satLevelElements)
+                //Map over each radio button element in the array
+                .map(function(radio) {
+                    //Return the Selected Value
+                    return radio.value;
+                });
+
+            var submission = {
+                "name": name,
+                "email": email,
+                "satisfaction": satLevels
+            };
+            
+            console.log("Submission: ", submission); 
+        }
+    </script>
 </body>
 </html>
