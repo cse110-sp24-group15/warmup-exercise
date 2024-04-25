@@ -84,7 +84,7 @@
         }
 
         //Global Array to store the submissions
-        var submissions;
+        var submissions = [];
 
         //This congrates the Data Makes the Json File
         function makeSubmission() {
@@ -104,7 +104,7 @@
                 });
 
             //Create Submission Object
-            submission = new Submission(name, email, feedback, satLevels);
+            var submission = new Submission(name, email, feedback, satLevels);
             
             //[Debug] This Displays the JSON Object 
             console.log("Submission: ", submission); 
@@ -115,8 +115,7 @@
 
         //general function to convert an array to json file
         function array2JSON(array) {
-
-            //todo
+            
         }
     </script>
 </body>
