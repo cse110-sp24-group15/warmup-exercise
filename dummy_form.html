@@ -70,9 +70,16 @@
         <p>&copy; 2024 Your Website Name. All rights reserved.</p>
     </footer>
 
-    <!-- Add any scripts or additional content here -->
+    <!-- JavaScript code for submission handling -->
     <script>
-        //Define a Submission Object
+        /**
+         * Submission constructor function.
+         * @constructor
+         * @param {string} name - The name of the submitter.
+         * @param {string} email - The email of the submitter.
+         * @param {string} feedback - The feedback provided by the submitter.
+         * @param {string} satisfaction - The satisfaction level chosen by the submitter.
+         */
         function Submission(name, email, feedback, satisfaction) {
             this.name = name;
             this.email = email;
@@ -83,39 +90,31 @@
             this.date = sDate;
         }
 
-        //Global Array to store the submissions
+        // Global array to store the submissions
         var submissions = [];
 
-        //This congrates the Data Makes the Json File
+        /**
+         * Function to handle submission.
+         */
         function makeSubmission() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var feedback = document.getElementById("feedback").value;
 
-           // This gets the data from the buttons and stores it in a variable
+            // Get the selected satisfaction level
             var satLevelElements = document.querySelectorAll('input[type="radio"]:checked');
+            var satLevels = Array.from(satLevelElements).map(function(radio) {
+                return radio.value;
+            });
 
-            //Essentially Makes the NodeList from Radio Button Elements to an Array
-            var satLevels = Array.from(satLevelElements)
-                //Map over each radio button element in the array
-                .map(function(radio) {
-                    //Return the Selected Value
-                    return radio.value;
-                });
-
-            //Create Submission Object
+            // Create Submission Object
             var submission = new Submission(name, email, feedback, satLevels);
             
-            //[Debug] This Displays the JSON Object 
+            // Log the submission object
             console.log("Submission: ", submission); 
 
-            //Now Store this Submission in the Global submissions array
+            // Store the submission in the global submissions array
             submissions.push(submission);
-        }
-
-        //general function to convert an array to json file
-        function array2JSON(array) {
-            
         }
     </script>
 </body>
