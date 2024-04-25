@@ -42,13 +42,30 @@ input[type="text"], textarea {
     margin-bottom: 10px; 
 }
 
-.radio-container label{
-    display: inline-block;
-    margin-right: 5px;
+.radio-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
 }
 
-.radio-container input[type="radio"] {
-    margin-right: 5px;
+.radio-container label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.radio-container label img {
+    display: block;
+    width: auto;
+    height: 70px;
+    background: transparent;
+    transition: filter 0.3s ease;
+}
+
+.radio-container input[type="radio"]:checked + label img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #3e9fdcd5);
 }
 
 button {
