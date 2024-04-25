@@ -71,7 +71,34 @@
 
     <!-- Add any scripts or additional content here -->
     <script>
+<<<<<<< Updated upstream
         //This congrates the Data Makes the Json File
+=======
+        // Global array to store the submissions
+        var submissions = [];
+
+        /**
+         * Submission constructor function.
+         * @constructor
+         * @param {string} name - The name of the submitter.
+         * @param {string} email - The email of the submitter.
+         * @param {string} feedback - The feedback provided by the submitter.
+         * @param {string} satisfaction - The satisfaction level chosen by the submitter.
+         */
+        function Submission(name, email, feedback, satisfaction) {
+            this.name = name;
+            this.email = email;
+            this.feedback = feedback;
+            this.satisfaction = satisfaction;
+            var date = new Date();
+            var sDate = date.toLocaleString();
+            this.date = sDate;
+        }
+
+        /**
+         * Function to handle submission.
+         */
+>>>>>>> Stashed changes
         function makeSubmission() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
