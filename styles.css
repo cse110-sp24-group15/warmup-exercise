@@ -1,0 +1,86 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: tbd; */
+    background: white; 
+    color: #333; 
+    line-height: 1.5; 
+    padding: 20px; 
+}
+
+header, footer {
+    background: #3b4550; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+}
+
+main {
+    margin-top: 20px; 
+}
+
+fieldset {
+    border: 2px solid #3b4550; 
+    margin: 20px 0; 
+    padding: 20px; 
+    background: white; 
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], textarea {
+    width: calc(100% - 22px); /* Full width - padding */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 10px; 
+}
+
+.radio-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.radio-container label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.radio-container label img {
+    display: block;
+    width: auto;
+    height: 70px;
+    background: transparent;
+    transition: filter 0.3s ease;
+}
+
+.radio-container input[type="radio"]:checked + label img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #3e9fdcd5);
+}
+
+button {
+    background: #3b4550; 
+    color: white;
+    border: none; 
+    padding: 10px 20px; /* Padding around text in button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background: #456282; 
+}
+
+footer {
+    margin-top: 20px; 
+    /* font-size: tbd;  */
+}
