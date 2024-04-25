@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title Here</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add any additional stylesheets or meta tags here -->
+</head>
+<body>
+    <header>
+        <h1>Your Website Title</h1>
+        <!-- Add any navigation or header content here -->
+    </header>
+
+    <main>
+        <!-- Main content goes here -->
+        <section>
+            <legend>
+                <fieldset>
+                    <legend>Submissions:</legend>
+                    <label for ="name">Name:</label>
+                    <input type="text" id="name">
+                    <!-- BR is Creating a Space -->
+                    <br> 
+
+                    <label for ="email">Email:</label>
+                    <input type="text" id="email">
+                    <!-- BR is Creating a Space-->
+                    <br>
+                    <br>
+
+                    <label for="satfrom">Satisfaction Level:</label>
+                    <!-- BR is Creating a Space-->
+                    <br>
+
+                    <label for="satisfaction1">1</label>
+                    <input type="radio" id="satisfaction1" name="satisfaction" value="1">
+                    
+                    <label for="satisfaction2">2</label>
+                    <input type="radio" id="satisfaction2" name="satisfaction" value="2">
+                    
+                    <label for="satisfaction3">3</label>
+                    <input type="radio" id="satisfaction3" name="satisfaction" value="3">
+                    
+                    <label for="satisfaction4">4</label>
+                    <input type="radio" id="satisfaction4" name="satisfaction" value="4">
+                    
+                    <label for="satisfaction5">5</label>
+                    <input type="radio" id="satisfaction5" name="satisfaction" value="5">
+                    <!-- BR is Creating a Space-->
+                    <br>
+
+                    <button type="submit" onclick="makeSubmission()">Submit</button>
+
+
+                </fieldset>
+            </legend>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Add any scripts or additional content here -->
+    <script>
+        //This congrates the Data Makes the Json File
+        function makeSubmission() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+           // This gets the data from the buttons and stores it in a variable
+            var satLevelElements = document.querySelectorAll('input[type="radio"]:checked');
+
+            //Essentially Makes the NodeList from Radio Button Elements to an Array
+            var satLevels = Array.from(satLevelElements)
+                //Map over each radio button element in the array
+                .map(function(radio) {
+                    //Return the Selected Value
+                    return radio.value;
+                });
+
+            var submission = {
+                "name": name,
+                "email": email,
+                "satisfaction": satLevels
+            };
+            
+            console.log("Submission: ", submission); 
+        }
+    </script>
+</body>
+</html>
