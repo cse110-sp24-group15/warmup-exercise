@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 15 Sentiment Widget</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Add any additional stylesheets or meta tags here -->
 </head>
 <body>
     <header>
+        <div class="top-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
         <h1>Group 15 Sentiment Widget</h1>
+        <nav>
+            <ul class="clear">
+                <li><a href="#" class="wf" id="TeamIntro">Team Intro</a></li>
+                <li><a href="#" class="wf" id="MeetingNotesToggle">Meeting Notes</a></li>
+                <li><a href="#" class="wf" id="Contacts">Contacts</a></li>
+            </ul>
+        </nav>
         <!-- Add any navigation or header content here -->
     </header>
 
@@ -71,49 +86,29 @@
 
     <!-- Add any scripts or additional content here -->
     <script>
-         /**
-         * Submission constructor function.
-         * @constructor
-         * @param {string} name - The name of the submitter.
-         * @param {string} email - The email of the submitter.
-         * @param {string} feedback - The feedback provided by the submitter.
-         * @param {string} satisfaction - The satisfaction level chosen by the submitter.
-         */
-         function Submission(name, email, feedback, satisfaction) {
-            this.name = name;
-            this.email = email;
-            this.feedback = feedback;
-            this.satisfaction = satisfaction;
-            var date = new Date();
-            var sDate = date.toLocaleString();
-            this.date = sDate;
-        }
-
-        // Global array to store the submissions
-        var submissions = [];
-
-        /**
-         * Function to handle submission.
-         */
+        //This congrates the Data Makes the Json File
         function makeSubmission() {
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
-            var feedback = document.getElementById("feedback").value;
 
-            // Get the selected satisfaction level
+           // This gets the data from the buttons and stores it in a variable
             var satLevelElements = document.querySelectorAll('input[type="radio"]:checked');
-            var satLevels = Array.from(satLevelElements).map(function(radio) {
-                return radio.value;
-            });
 
-            // Create Submission Object
-            var submission = new Submission(name, email, feedback, satLevels);
+            //Essentially Makes the NodeList from Radio Button Elements to an Array
+            var satLevels = Array.from(satLevelElements)
+                //Map over each radio button element in the array
+                .map(function(radio) {
+                    //Return the Selected Value
+                    return radio.value;
+                });
+
+            var submission = {
+                "name": name,
+                "email": email,
+                "satisfaction": satLevels
+            };
             
-            // Log the submission object
             console.log("Submission: ", submission); 
-
-            // Store the submission in the global submissions array
-            submissions.push(submission);
         }
     </script>
 </body>
