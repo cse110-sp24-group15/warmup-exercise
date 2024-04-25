@@ -1,0 +1,39 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: tbd; */
+    background: white; 
+    color: #333; 
+    line-height: 1.5; 
+    padding: 20px; 
+}
+
+header, footer {
+    background: #3b4550; 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+}
+
+footer {
+    /* font-size: tbd;  */
+}
+
+main {
+    margin-top: 20px; 
+}
+
+fieldset {
+    border: 2px solid #3b4550; 
+    margin: 20px 0; /* Space above and below the form */
+    padding: 20px; 
+    background: white; 
+}
+
+
+
