@@ -20,20 +20,50 @@ header, footer {
     text-align: center; 
 }
 
-footer {
-    /* font-size: tbd;  */
-}
-
 main {
     margin-top: 20px; 
 }
 
 fieldset {
     border: 2px solid #3b4550; 
-    margin: 20px 0; /* Space above and below the form */
+    margin: 20px 0; 
     padding: 20px; 
     background: white; 
 }
 
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
 
+input[type="text"], textarea {
+    width: calc(100% - 22px); /* Full width - padding */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 10px; 
+}
 
+.radio-container label{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.radio-container input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background: #3b4550; 
+    color: white;
+    border: none; 
+    padding: 10px 20px; /* Padding around text in button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background: #456282; 
+}
+
+footer {
+    margin-top: 20px; 
+    /* font-size: tbd;  */
+}
