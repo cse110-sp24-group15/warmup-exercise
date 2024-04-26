@@ -13,7 +13,7 @@ function Submission(name, email, feedback, satisfaction) {
     this.satisfaction = satisfaction;
     var date = new Date();
     var sDate = date.toLocaleString();
-    this.date = sDate;
+    this.date = sDate;    
 }
 
 // Global array to store the submissions
@@ -35,10 +35,13 @@ function makeSubmission() {
 
     // Create Submission Object
     var submission = new Submission(name, email, feedback, satLevels);
-    
+
     // Log the submission object
     console.log("Submission: ", submission); 
 
     // Store the submission in the global submissions array
     submissions.push(submission);
+    if(name.trim() !== '' && email.trim() !== ''){
+        window.location.href = "success_page.html";
+    }
 }
