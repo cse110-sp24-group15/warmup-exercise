@@ -104,30 +104,90 @@ nav ul li a:hover, nav ul li a:focus {
 /* ------------------------------------ Main (Team Intro + Gallery) ------------------------------------ */
 .greeting-team-gallery {
     margin: 20px auto;
-    background-color: white;
-    color: #333;
+    padding: 20px;
+    background-color: #3b4550;
+    color: white;
 }
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: white; 
+    margin: 20px 0; 
+}
+
 .greeting-team-gallery h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .greeting-team-gallery h3 {
     margin-bottom: 30px;
 }
 
-/* Team Lore/Slogan */
-.greeting-container .lore {
-    padding: 0.5rem 1rem;
-    background-color: #3b4550;
-    color: white;
-    font-size: 16px;
+.greeting-container h3 span {
+    background-color: #626d7e; 
+    color: #ffffff;
+    font-size: 18px; 
     font-weight: bold;
-    border-radius: 5px;
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Logo */
+.greeting-container h3 .logo-image-container {
+    display: none; /* Hidden by default */
+    position: relative;
+    width: 100%; 
+    text-align: center; /* image horizontally */
+    padding-top: 40px; 
+}
+
+.greeting-container h3 .logo-image {
+    width: 300px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* shadow for the image */
+}
+
+.greeting-container h3 span:hover {
+    transform: scale(1.05);
+}
+.greeting-container h3 span:hover + .logo-image-container {
+    display: block; /* Show the image */
+}
+.greeting-container h3 span:focus + .logo-image-container {
+    display: block; /* Show the image */
 }
 
 /* Team Values */
 .values {
     list-style-type: none;
     margin-bottom: 30px;
+}
+
+.values li {
+    padding: 8px 12px;
+    background-color: #626d7e; 
+    color: white;
+    margin-bottom: 15px; 
+    border-radius: 10px; 
+    transition: background-color 0.3s, color 0.3s;
+    width: 60%; 
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); 
+
+    h3 {
+        margin-bottom: 10px;
+    }
+}
+
+.values li:hover {
+    background-color: #e2e2e2; 
+    color: #000000;
+    cursor: pointer; 
 }
 
 /* Gallery */
@@ -152,6 +212,7 @@ nav ul li a:hover, nav ul li a:focus {
 
 .team-item img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .profile {
@@ -203,6 +264,79 @@ nav ul li a:hover, nav ul li a:focus {
     margin-bottom: 10px;
 }
 
+.rules-container {
+    text-align: center;
+    margin-top: 20px; 
+    padding: 20px;
+    background-color: #e7e8e9; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.rules-container p {
+    color: #666; 
+    margin-bottom: 20px; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.github-link {
+    display: inline-block;
+    background-color: #19283d; 
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.github-link:hover, .github-link:focus {
+    background-color: #3b4550; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.feedback-section {
+    text-align: center;
+    margin-top: 20px; 
+    padding: 20px;
+    background-color: #e7e8e9; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.feedback-section h2 {
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+.feedback-section p {
+    color: #666;
+    margin-bottom: 20px; 
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.feedback-link {
+    display: inline-block;
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.feedback-link:hover, .feedback-link:focus {
+    background-color: #45a049;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+}
+
 /* ------------------------------------ Footer (License) ------------------------------------ */
 footer {
     margin-top: auto; /* Automatic margin to push to bottom */
@@ -232,6 +366,10 @@ footer {
         width: 70%; /* X -> 70% */
         margin: 0 auto; /* X -> 0 auto; to make left/right margin equal */
         font-size: 15px;
+    }
+
+    .values li {
+        width: 80%;
     }
 }
 
