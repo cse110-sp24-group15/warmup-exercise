@@ -1,0 +1,290 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: white; 
+    color: #333; 
+    line-height: 1.5; 
+    padding: 0 20px 20px 20px;  /* padding-top: 0 for top menu*/
+
+    min-height: 100%; /* Full viewpoint height */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+header, footer {
+    background: #3b4550; /* Main color for website */
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+}
+
+/* ------------------------------------ Top Menu ------------------------------------ */
+.top-menu {
+    background: transparent;
+    text-align: right;
+    padding: 10px 0 10px 25px;
+}
+
+.top-menu ul {
+    list-style: none;
+}
+
+.top-menu ul li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.top-menu ul li a {
+    text-decoration: none;
+    color: #3b4550;
+    font-weight: lighter;
+    font-size: 13px;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* ------------------------------------ Nav Menu Bars ------------------------------------ */
+nav {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    min-width: 150px;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Later, can be changed after making nav ul to flexbox */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Nav Menu Bars hover or clicked */
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #626d7e; /* Secondary color for website */
+    color: white;
+}
+
+/* ------------------------------------ Main (Team Intro + Gallery) ------------------------------------ */
+.greeting-team-gallery {
+    margin: 20px auto;
+    background-color: white;
+    color: #333;
+}
+.greeting-team-gallery h2 {
+    margin-bottom: 10px;
+}
+.greeting-team-gallery h3 {
+    margin-bottom: 30px;
+}
+
+/* Team Lore/Slogan */
+.greeting-container .lore {
+    padding: 0.5rem 1rem;
+    background-color: #3b4550;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Team Values */
+.values {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+/* Gallery */
+.team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.team-item {
+    flex-shrink: 0;
+    margin: 5px 5px;
+    opacity: 0.7; /* opacity 0.7 -> 1 when hovered */
+    transition: all 0.4s; /* transition - hover */
+    list-style: none;
+}
+
+.team-item:hover {
+    opacity: 1;
+}
+
+.team-item img {
+    width: 100%;
+}
+
+.profile {
+    background-color: #3b4550;
+    color: #3b4550;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.profile-contents {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+}
+
+.profile-contents h2 {
+    font-size: 17px;
+}
+
+.profile-contents h2 span {
+    display: block;
+    font-size: 13px;
+}
+
+.profile-contents p {
+    font-size: 12px;
+    min-width: 140px;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.2;
+    transition: all 0.9s;
+    opacity: 0;
+}
+
+.team-item:hover .profile-contents p {
+    opacity: 1;
+    transition-delay: .3s;
+    max-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------ Footer (License) ------------------------------------ */
+footer {
+    margin-top: auto; /* Automatic margin to push to bottom */
+    font-size: 10px; 
+}
+
+/* ------------------------------------ Responsive Web ------------------------------------ */
+/* Smartphones */
+@media only screen and (max-width: 730px) {
+    header, footer {
+        padding: 10px 10px; /* 10px 20px -> 10px 10px */
+        border-radius: 10px; /* rectangular border -> rounded border */
+    }
+
+    .top-menu ul li a {
+        font-size: 12px; /* 13px -> 12px */
+    }
+    
+    nav ul li {
+        display: block; /* inline-block -> block */
+        margin-right: 0; /* 20px -> 0 */
+        margin-bottom: 10px; /* X -> 10px */
+    }
+
+    nav ul li a {
+        padding: 0.5rem; /* 0.5rem 1rem -> 0.5rem 0.5rem */
+        width: 70%; /* X -> 70% */
+        margin: 0 auto; /* X -> 0 auto; to make left/right margin equal */
+        font-size: 15px;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 731px) and (max-width: 1024px) {
+    header, footer {
+        padding: 15px 15px; /* 10px 20px -> 15px 15px */
+    }
+
+    header h1 {
+        font-size: 40px; /* h1 size -> 40px */
+    }
+
+    nav {
+        margin-top: 25px; /* 20px -> 25px */
+    }
+    
+    nav ul li a {
+        padding: 0.5rem 0.8rem; /* 0.5rem 1rem -> 0.5rem 0.8rem */
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 11px; /* 10px -> 11px */
+    }
+}
+/* Laptops, Desktops, Larger Screens 1025 - */
+@media only screen and (min-width: 1025px) {
+    .top-menu ul li a {
+        font-size: 14px; /* 13px -> 14px */
+    }
+
+    header {
+        padding: 20px 20px; /* 10px 20px -> 20px 20px */
+    }
+
+    footer {
+        padding: 15px 20px; /* 10px 20px -> 15px 20px */
+    }
+
+    header h1 {
+        font-size: 60px; /* h1 size -> 60px */
+    }
+    
+    nav {
+        margin-top: 30px; /* 20px -> 30px */
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 13px; /* 10px -> 13px */
+    }
+}
