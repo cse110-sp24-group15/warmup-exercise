@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 15 Sentiment Widget</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="backend.js"></script>
     <link rel="stylesheet" href="styles.css">
     <!-- Add any additional stylesheets or meta tags here -->
 </head>
@@ -85,33 +86,5 @@
         <!-- Footer content goes here -->
         <p>&copy; 2024 Group 15 [Jover] Sentiment Widget. All rights reserved.</p>
     </footer>
-
-    <!-- Add any scripts or additional content here -->
-    <script>
-        //This congrates the Data Makes the Json File
-        function makeSubmission() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-
-           // This gets the data from the buttons and stores it in a variable
-            var satLevelElements = document.querySelectorAll('input[type="radio"]:checked');
-
-            //Essentially Makes the NodeList from Radio Button Elements to an Array
-            var satLevels = Array.from(satLevelElements)
-                //Map over each radio button element in the array
-                .map(function(radio) {
-                    //Return the Selected Value
-                    return radio.value;
-                });
-
-            var submission = {
-                "name": name,
-                "email": email,
-                "satisfaction": satLevels
-            };
-            
-            console.log("Submission: ", submission); 
-        }
-    </script>
 </body>
 </html>
