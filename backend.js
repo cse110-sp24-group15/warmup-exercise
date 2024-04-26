@@ -41,7 +41,8 @@ function makeSubmission() {
 
     // Store the submission in the global submissions array
     submissions.push(submission);
-    if(name.trim() !== '' && email.trim() !== ''){
+
+    if(name.trim() !== '' && email.trim() !== '' && satLevels.length > 0){
         window.location.href = "success_page.html";
     }
 }
