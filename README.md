@@ -9,3 +9,5 @@ User Stories: [User stories](https://github.com/cse110-sp24-group15/warmup-exerc
 Documentation: [docs](https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/documentation.md)
 
 SWOT Analysis: [https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/SWOT_Analysis_CSE110_Group15.png](https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/SWOT_Analysis_CSE110_Group15.png)
+
+Deveopler Workflow: [https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/dev_workflow.png](https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/dev_workflow.png)
