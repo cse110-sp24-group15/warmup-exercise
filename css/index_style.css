@@ -123,41 +123,47 @@ hr {
     margin-bottom: 30px;
 }
 
-.greeting-container h3 span {
+.greeting-container span {
     background-color: #626d7e; 
     color: #ffffff;
-    font-size: 18px; 
-    font-weight: bold;
     padding: 10px 20px; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: inline-block;
     transition: transform 0.3s ease-in-out;
     position: relative;
+    margin-bottom: 30px;
+}
+
+.greeting-container span h3 {
+    margin-bottom: 0;
+    font-size: 18px; 
+    font-weight: bold;
 }
 
 /* Logo */
-.greeting-container h3 .logo-image-container {
+.slogan-container .logo-image-container {
     display: none; /* Hidden by default */
     position: relative;
     width: 100%; 
     text-align: center; /* image horizontally */
-    padding-top: 40px; 
+    padding-top: 15px; 
+    margin-bottom: 30px;
 }
 
-.greeting-container h3 .logo-image {
+.slogan-container .logo-image-container .logo-image {
     width: 300px; 
     border-radius: 5px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* shadow for the image */
 }
 
-.greeting-container h3 span:hover {
+.slogan-container span:hover {
     transform: scale(1.05);
 }
-.greeting-container h3 span:hover + .logo-image-container {
+.slogan-container span:hover + .logo-image-container {
     display: block; /* Show the image */
 }
-.greeting-container h3 span:focus + .logo-image-container {
+.slogan-container span:focus + .logo-image-container {
     display: block; /* Show the image */
 }
 
