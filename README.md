@@ -7,3 +7,5 @@ Miro Design Boad: [https://miro.com/welcomeonboard/YXlTTlgzazA1YXFEeUxFc3ppT1RQM
 User Stories: [User stories](https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/stories/user_stories.md)
 
 Documentation: [docs](https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/documentation.md)
+
+SWOT Analysis: [https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/SWOT_Analysis_CSE110_Group15.png](https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/SWOT_Analysis_CSE110_Group15.png)
