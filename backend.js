@@ -27,6 +27,11 @@ function makeSubmission() {
     var email = document.getElementById("email").value;
     var feedback = document.getElementById("feedback").value;
 
+    if (!name || !email || !feedback) {
+        alert("Please fill all required fields.");
+        return false;
+    }
+
     // Get the selected satisfaction level
     var satLevelElements = document.querySelectorAll('input[type="radio"]:checked');
     var satLevels = Array.from(satLevelElements).map(function(radio) {
