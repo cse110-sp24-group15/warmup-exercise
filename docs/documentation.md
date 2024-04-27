@@ -35,3 +35,6 @@ All tests are found in the \tests directory. For each file name them "HTMLFILENA
 
 ## Deployment
 We are deploying this website using github pages were all our webpages, index.html (team page), dummy_doc.html (sentiment_widget) and  success.html (success page for form submission)
+
+## GitHub Actions
+We have an auto labeller for PRs based on file changes and a bot which greets you for the first commit.
