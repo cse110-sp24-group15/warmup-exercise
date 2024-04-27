@@ -1,4 +1,4 @@
-# warmup-exercise
+# warmup-exercise: Sentiment Widget
 
 URL For Website (Feedback Form With Sentiment Widget at the End): [https://cse110-sp24-group15.github.io/warmup-exercise/](https://cse110-sp24-group15.github.io/warmup-exercise/)
 
