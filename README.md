@@ -13,3 +13,5 @@ SWOT Analysis: [https://github.com/cse110-sp24-group15/warmup-exercise/blob/main
 Deveopler Workflow: [https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/dev_workflow.png](https://github.com/cse110-sp24-group15/warmup-exercise/blob/main/docs/dev_workflow.png)
 
 Video: [https://youtu.be/QWU3Znh1p1o](https://youtu.be/QWU3Znh1p1o)
+
+GitHub Actions: Greeter and Auto Label PRs.
